@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARRITO</title>
+</head>
+<body>
+    <h1>-LA OFICINA-</h1>
+    <h2>"Ahorita vengo voy a la oficina"- Laura,2021
+        <br>
+        <br>
+        "Si no hay pisto, no existo"- Pedro,2021
+        <br>
+        <br>
+        "Mi cuba favorita es el conocimiento"- Sebastian,2021
+        <br>
+        <br>
+        "El amor puede esperar, la cerveza no por que se calienta"- Rodrigo,2021
+        <br>
+        <br>
+        "Ay chavo yo ni tomo"- Naydelin,2021
+    </h2>
+   <br>
+   <br>
+    <label>Azulito ($ 60)</label>
+    <input type="text" id="uno" costo="60" class="test" value="">
+    <br>
+    <br>
+    <label>Michelada ($ 50)</label>
+    <input type="text" id="dos" costo="50" class="test" value="">
+    <br>
+    <br>
+    <label>Chela ($ 25)</label>
+    <input type="text" id="tres" costo="25" class="test" value="">
+    <br>
+    <br>
+    <label>Tonayan en las rocas  ($ 15)</label>
+    <input type="text" id="uno" costo="15" class="test" value="">
+    <br>
+    <br>
+    <label>Licuachela ($ 120)</label>
+    <input type="text" id="dos" costo="120" class="test" value="">
+    <br>
+    <br>
+    <label>Cubeta para vomitar ($ 30)</label>
+    <input type="text" id="tres" costo="30" class="test" value="">
+    <br>
+    <br>
+    <label for="" id="muestra">Total:</label>
+
+</body>
+<script src="queri.min.js"></script>
+
+<script>
+    var elementos = [];
+    var Total = 0;
+
+
+    $(".test").change(function(){
+        var cantidad =$(this).val();
+        var costo = parseInt($(this).attr("costo"));
+        Total = Total + (costo * cantidad);
+        $("#muestra").html("Total:" + Total);
+    });
+   
+
+    </script>
+</html>
