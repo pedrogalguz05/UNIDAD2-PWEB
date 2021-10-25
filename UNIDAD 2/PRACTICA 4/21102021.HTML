@@ -4,36 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="21102021.min.js"></script>
+    <script src="211020211.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
-    
+    <input type="button" value="Girar" onclick="miRuleta.startAnimation();" />
+    <br /><br />
+    <canvas id="canvas" height="400" width="400"></canvas>
+    <script src="21102021.js"></script>
 </body>
 
-<script>
-    let letras = ["a", "e", "i", "o", "u"]
-    let frase =  prompt("Por favor Ingresa un numero: ");
-    var n = 0;
-    for (var i = 0; i < frase; i++){
-        if (frase[i] != " "){
-            document.writeln("<br>", frase[i] + "......");
-            for (var j = 0; j <= i; j++){
-                if (i == 0){
-                    document.write(frase[i]);
-                } else {
-                    n =  Math.round(Math.random()*4);
-                    document.write(frase[i] + letras[n]);
-                    for (var k = 0; k < i-1; k++){
-                        n =  Math.round(Math.random()*4);
-                        document.write(letras[n]);
-                    }
-                    document.write(", ");
-                }
-            }
-        } else {
-            document.write("<br>");
-        }
-    }
-</script>
-</html>
+
